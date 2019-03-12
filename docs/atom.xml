@@ -14,13 +14,13 @@ layout: feed
    <email>admin@swg-rebellion.com</email>
  </author>
 
- {% for doc in site.doc %}
+ {% for post in site.doc %}
  <entry>
-   <title>{{ doc.title }}</title>
-   <link href="https://swg-rebellion.github.io/{{ doc.url }}"/>
-   <updated>{{ doc.date | date_to_xmlschema }}</updated>
-   <id>https://swg-rebellion.github.io/{{ doc.id }}</id>
-   <content type="html">{{ doc.content | xml_escape }}</content>
+   <title>{{ post.title }}</title>
+   <link href="https://swg-rebellion.github.io/{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>https://swg-rebellion.github.io/{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
  
