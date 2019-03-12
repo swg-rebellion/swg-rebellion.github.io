@@ -4,17 +4,17 @@ layout: feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>Development Blog</title>
- <link href="https://swg-rebellion.github.io//blog/atom.xml" rel="self"/>
- <link href="https://swg-rebellion.github.io/blog"/>
+ <title>Documents</title>
+ <link href="https://swg-rebellion.github.io//docs/atom.xml" rel="self"/>
+ <link href="https://swg-rebellion.github.io/docs"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>https://swg-rebellion.github.io//blog</id>
+ <id>https://swg-rebellion.github.io//docs</id>
  <author>
    <name>SWG-Rebellion</name>
    <email>admin@swg-rebellion.com</email>
  </author>
 
- {% for post in site.posts %}
+ {% for post in site.doc %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="https://swg-rebellion.github.io/{{ post.url }}"/>
