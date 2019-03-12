@@ -10,8 +10,8 @@ layout: feed
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>https://swg-rebellion.github.io//blog</id>
  <author>
-   <name>swg-rebellion</name>
-   <email>admin@swgrebellion.com</email>
+   <name>SWG-Rebellion</name>
+   <email>admin@swg-rebellion.com</email>
  </author>
 
  {% for post in site.posts %}
