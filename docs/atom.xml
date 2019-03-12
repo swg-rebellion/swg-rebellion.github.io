@@ -1,0 +1,27 @@
+---
+layout: feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Documents</title>
+ <link href="https://swg-rebellion.github.io//docs/atom.xml" rel="self"/>
+ <link href="https://swg-rebellion.github.io/docs"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>https://swg-rebellion.github.io//docs</id>
+ <author>
+   <name>SWG-Rebellion</name>
+   <email>admin@swg-rebellion.com</email>
+ </author>
+
+ {% for doc in site.doc %}
+ <entry>
+   <title>{{ doc.title }}</title>
+   <link href="https://swg-rebellion.github.io/{{ doc.url }}"/>
+   <updated>{{ doc.date | date_to_xmlschema }}</updated>
+   <id>https://swg-rebellion.github.io/{{ doc.id }}</id>
+   <content type="html">{{ doc.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>

@@ -2,18 +2,11 @@
 layout: default
 title: Documents
 ---
+<h1>{{ page.title }}</h1>
+<ul class="doc">
 
-	<div class="docs">
-		<a href="#" class="download" title="Download CV as PDF"></a>			
-					<h1>Documents and Guides</h1>
-					<address>
-					<strong>todo</strong><br>
-					Build internal documents and best practice guides<br>
-					Build how to guieds for set up and testing<br>
-					<abbr title="phone">P:</abbr>0000<br>
-					<span class="obfuscate">admin@swg-rebellion.com</span>
-					</address>
-
-
-
-	</div>
+  {% for post in site.doc %}
+    <li><span>{{ doc.date | date_to_string }}</span> &raquo; <a href="{{ doc.url }}" title="{{ doc.title }}">{{ doc.title }}</a></li>
+  {% endfor %}
+    
+</ul>
